@@ -1,520 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Steel wheel Towing Services</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="" name="keywords" />
-    <meta content="" name="description" />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+<head>
+  <meta charset="utf-8" />
+  <title>Steel wheel Towing Services</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="" name="keywords" />
+  <meta content="" name="description" />
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="icon" />
 
-    <!-- Icon Font Stylesheet -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap"
+    rel="stylesheet" />
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link
-      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
-      rel="stylesheet"
-    />
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
-    <style>
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Template Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+  <style>
+    .service_card {
+      margin: 25px 10px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      word-wrap: break-word;
+      background-color: #fff;
+      background-clip: border-box;
+      transition: 0.25s ease-in-out;
+    }
+
+    .service_card img {
+      object-fit: cover;
+      object-position: center;
+      height: 250px;
+      width: 100%;
+      transition: 0.25s all;
+    }
+
+    .service_card:hover {
+      transform: scale(1.025);
+      border-radius: 0.375rem;
+      box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
+
       .service_card {
-        margin: 25px 10px;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-        word-wrap: break-word;
-        background-color: #fff;
-        background-clip: border-box;
-        transition: 0.25s ease-in-out;
-      }
-      .service_card img {
-        object-fit: cover;
-        object-position: center;
-        height: 250px;
-        width: 100%;
-        transition: 0.25s all;
-      }
-      .service_card:hover {
-        transform: scale(1.025);
-        border-radius: 0.375rem;
-        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.25);
-
-        .service_card {
-          & img {
-            border-top-left-radius: 0.375rem;
-            border-top-right-radius: 0.375rem;
-          }
+        & img {
+          border-top-left-radius: 0.375rem;
+          border-top-right-radius: 0.375rem;
         }
       }
-      .service_card img:hover {
-        transform: translateY(-3%);
-      }
+    }
 
-      .service_card_content {
-        padding: 16px;
-      }
-      .service_card_content h3 {
-        font-family: nunito sans;
-        font-family: 18px;
-      }
-      .service_card_content p {
-        font-family: nunito sans;
-        text-align: justify;
-      }
-    </style>
-  </head>
+    .service_card img:hover {
+      transform: translateY(-3%);
+    }
 
-  <body>
-    <!-- Spinner Start -->
-    <div
-      id="spinner"
-      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
-    >
-      <div
-        class="spinner-border text-primary"
-        style="width: 3rem; height: 3rem"
-        role="status"
-      >
-        <span class="sr-only">Loading...</span>
-      </div>
+    .service_card_content {
+      padding: 16px;
+    }
+
+    .service_card_content h3 {
+      font-family: nunito sans;
+      font-family: 18px;
+    }
+
+    .service_card_content p {
+      font-family: nunito sans;
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner"
+    class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+      <span class="sr-only">Loading...</span>
     </div>
-    <!-- Spinner End -->
+  </div>
+  <!-- Spinner End -->
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-secondary p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-9 px-5 text-center">
-                <div class="h-100 d-inline-flex  align-items-center py-3 me-4">
-                  <h5 class="text-primary">24 Hours Support | Service All Over Bahrain | Transportation With
-                    GCC</h5>  
-                </div>
-            </div>
-            <div class="col-lg-3 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+  <!-- Topbar Start -->
+  <div class="container-fluid bg-secondary p-0">
+    <div class="row gx-0 d-none d-lg-flex">
+      <div class="col-lg-9 px-5 text-center">
+        <div class="h-100 d-inline-flex  align-items-center py-3 me-4">
+          <h5 class="text-primary">24 Hours Support | Service All Over Bahrain | Transportation With
+            GCC</h5>
         </div>
-    </div>
-    <!-- Topbar End -->
-
-    <!-- Navbar Start -->
-    <nav
-      class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0"
-    >
-      <a
-        href="index.html"
-        class="navbar-brand d-flex align-items-center px-4 px-lg-5"
-      >
-        <img src="./img/main_logo.png" alt="" />
-      </a>
-      <button
-        type="button"
-        class="navbar-toggler me-4"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto p-4 p-lg-0">
-          <a href="index.html" class="nav-item nav-link">Home</a>
-          <a href="./about.html" class="nav-item nav-link">About</a>
-          <a href="./service.html" class="nav-item nav-link">Services</a>
-          <a href="./contact.html" class="nav-item nav-link">Contact</a>
-        </div>
-        <a
-          href="tel:+97333773425"
-          class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
-          ><i class="fa fa-phone-alt me-2"></i>+973-33773425</a
-        >
       </div>
-    </nav>
-    <!-- Navbar End -->
-
-    <!-- Page Header Start -->
-    <div
-      class="container-fluid page-header mb-5 p-0"
-      style="background-image: url(img/carousel-bg-2.jpg)"
-    >
-      <div class="container-fluid page-header-inner py-5">
-        <div class="container text-center">
-          <h1 class="display-3 text-white mb-3 animated slideInDown">
-            Services
-          </h1>
+      <div class="col-lg-3 px-5 text-end">
+        <div class="h-100 d-inline-flex align-items-center">
+          <a class="btn btn-sm-square bg-white text-primary me-1"
+            href="https://www.facebook.com/nitheesh.karthika?mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+          <a class="btn btn-sm-square bg-white text-primary me-0"
+            href="https://www.instagram.com/nitheeshkarthika?igsh=Y2N6endycDFrYnU0 "><i
+              class="fab fa-instagram"></i></a>
         </div>
       </div>
     </div>
-    <!-- Page Header End -->
+  </div>
+  <!-- Topbar End -->
 
-    <!-- Service Start -->
-    <div class="container-xxl service py-5">
-      <div class="container">
-        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-          <h6 class="text-primary text-uppercase">// Our Services //</h6>
-          <h1 class="mb-5">Explore Our Services</h1>
-        </div>
-        <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/breakdown_recovery.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Breakdown Recovery</h3>
-                <p class="description">
-                  When your vehicle breaks down unexpectedly, our breakdown
-                  recovery service is here to help. Our skilled technicians will
-                  quickly assess the situation, provide any necessary roadside.
-                  repairs
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/Car_Towing _Services.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Car Towing Services</h3>
-                <p class="description">
-                  If your vehicle is unable to be repaired on-site, our car
-                  towing services come to the rescue. With a fleet of modern and
-                  well-equipped tow trucks, we can safely transport your
-                  vehicle.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img src="./img/services/Jumpstarts.jpg" alt="Jumpstarts" />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Jumpstarts</h3>
-                <p class="description">
-                  Dead battery? No problem! Our jumpstart service will have your
-                  vehicle up and running again in no time. Whether you left your
-                  lights on overnight or your battery is simply old and worn
-                  out.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img src="./img/services/fuel_delivery.jpg" alt="Jumpstarts" />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Fuel Delivery</h3>
-                <p class="description">
-                  Running out of fuel is a frustrating experience, but it
-                  doesn't have to ruin your day. With our fuel delivery service,
-                  we'll bring the fuel you need directly to your location.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img src="./img/services/Mobile _Tyres.jpg" alt="Jumpstarts" />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Mobile Tyres</h3>
-                <p class="description">
-                  Flat tyre? Don't let it slow you down. Our mobile tyre service
-                  brings the garage to you, providing on-the-spot tyre repairs
-                  or replacements wherever you are.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/battery_service.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Battery Service</h3>
-                <p class="description">
-                  Our battery service includes battery testing, replacements,
-                  and installations, ensuring that your vehicle's power source
-                  is in top condition.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/winching_service.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Winching & Pull Out service by 4x4</h3>
-                <p class="description">
-                  Our Winching & Pull Out service, powered by robust 4x4
-                  vehicles, is designed to rescue vehicles stuck in challenging
-                  situations. Whether your car is trapped in mud, snow, sand, or
-                  a ditch.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/breakdown_truck.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Breakdown trucks</h3>
-                <p class="description">
-                  Our breakdown truck service provides fast and reliable
-                  assistance for vehicles that have experienced mechanical
-                  failure or accidents. Equipped with state-of-the-art
-                  technology and operated by skilled technicians.
-                </p>
-              </div>
-            </div>
-          </div>
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+    <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+      <img src="./img/main_logo.png" alt="" />
+    </a>
+    <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="navbar-nav ms-auto p-4 p-lg-0">
+        <a href="index.html" class="nav-item nav-link">Home</a>
+        <a href="./about.html" class="nav-item nav-link">About</a>
+        <a href="./service.html" class="nav-item nav-link">Services</a>
+        <a href="./contact.html" class="nav-item nav-link">Contact</a>
+      </div>
+      <a href="tel:+97333773425" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block"><i
+          class="fa fa-phone-alt me-2"></i>+973-33773425</a>
+    </div>
+  </nav>
+  <!-- Navbar End -->
 
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/roadside_assistance.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Roadside Assistance</h3>
-                <p class="description">
-                  Our roadside assistance service is designed to provide
-                  immediate support for drivers facing unexpected vehicle
-                  issues. Whether you encounter a flat tire, dead battery, fuel
-                  shortage, or minor mechanical problems.
-                </p>
-              </div>
+  <!-- Page Header Start -->
+  <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-bg-2.jpg)">
+    <div class="container-fluid page-header-inner py-5">
+      <div class="container text-center">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">
+          Services
+        </h1>
+      </div>
+    </div>
+  </div>
+  <!-- Page Header End -->
+
+  <!-- Service Start -->
+  <div class="container-xxl service py-5">
+    <div class="container">
+      <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+        <h6 class="text-primary text-uppercase">// Our Services //</h6>
+        <h1 class="mb-5">Explore Our Services</h1>
+      </div>
+      <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/breakdown_recovery.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Breakdown Recovery</h3>
+              <p class="description">
+                When your vehicle breaks down unexpectedly, our breakdown
+                recovery service is here to help. Our skilled technicians will
+                quickly assess the situation, provide any necessary roadside.
+                repairs
+              </p>
             </div>
           </div>
         </div>
-        <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/minor_auto_repair.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Minor Auto Repair</h3>
-                <p class="description">
-                  At Steel Wheel Towing, we understand that minor auto issues can
-                  cause major disruptions to your day. That's why we offer
-                  on-the-spot minor auto repair services to get you back on the
-                  road quickly.
-                </p>
-              </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/Car_Towing _Services.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Car Towing Services</h3>
+              <p class="description">
+                If your vehicle is unable to be repaired on-site, our car
+                towing services come to the rescue. With a fleet of modern and
+                well-equipped tow trucks, we can safely transport your
+                vehicle.
+              </p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img
-                  src="./img/services/locked_out_service.jpg"
-                  alt="Jumpstarts"
-                />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Locked Out Service</h3>
-                <p class="description">
-                  Getting locked out of your vehicle can be a frustrating and
-                  stressful experience. Steel Wheel Towing offers a reliable locked
-                  out service to help you regain access to your car without
-                  causing any damage.
-                </p>
-              </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/Jumpstarts.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Jumpstarts</h3>
+              <p class="description">
+                Dead battery? No problem! Our jumpstart service will have your
+                vehicle up and running again in no time. Whether you left your
+                lights on overnight or your battery is simply old and worn
+                out.
+              </p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="service_card">
-              <div class="service_card_img">
-                <img src="./img/services/out_of_gas.jpg" alt="Jumpstarts" />
-              </div>
-              <div class="service_card_content">
-                <h3 class="title">Out Of Gas/Fuel Delievery Service</h3>
-                <p class="description">
-                  Running out of gas can happen to anyone, Steel Wheel Towing
-                  provides an out of gas/fuel delivery service to ensure you’re
-                  never stranded for long. Just give us a call.
-                </p>
-              </div>
+        </div>
+      </div>
+      <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/fuel_delivery.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Fuel Delivery</h3>
+              <p class="description">
+                Running out of fuel is a frustrating experience, but it
+                doesn't have to ruin your day. With our fuel delivery service,
+                we'll bring the fuel you need directly to your location.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/Mobile _Tyres.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Mobile Tyres</h3>
+              <p class="description">
+                Flat tyre? Don't let it slow you down. Our mobile tyre service
+                brings the garage to you, providing on-the-spot tyre repairs
+                or replacements wherever you are.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/battery_service.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Battery Service</h3>
+              <p class="description">
+                Our battery service includes battery testing, replacements,
+                and installations, ensuring that your vehicle's power source
+                is in top condition.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/winching_service.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Winching & Pull Out service by 4x4</h3>
+              <p class="description">
+                Our Winching & Pull Out service, powered by robust 4x4
+                vehicles, is designed to rescue vehicles stuck in challenging
+                situations. Whether your car is trapped in mud, snow, sand, or
+                a ditch.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/breakdown_truck.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Breakdown trucks</h3>
+              <p class="description">
+                Our breakdown truck service provides fast and reliable
+                assistance for vehicles that have experienced mechanical
+                failure or accidents. Equipped with state-of-the-art
+                technology and operated by skilled technicians.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/roadside_assistance.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Roadside Assistance</h3>
+              <p class="description">
+                Our roadside assistance service is designed to provide
+                immediate support for drivers facing unexpected vehicle
+                issues. Whether you encounter a flat tire, dead battery, fuel
+                shortage, or minor mechanical problems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mx-auto g-4 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/minor_auto_repair.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Minor Auto Repair</h3>
+              <p class="description">
+                At Steel Wheel Towing, we understand that minor auto issues can
+                cause major disruptions to your day. That's why we offer
+                on-the-spot minor auto repair services to get you back on the
+                road quickly.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/locked_out_service.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Locked Out Service</h3>
+              <p class="description">
+                Getting locked out of your vehicle can be a frustrating and
+                stressful experience. Steel Wheel Towing offers a reliable locked
+                out service to help you regain access to your car without
+                causing any damage.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="service_card">
+            <div class="service_card_img">
+              <img src="./img/services/out_of_gas.jpg" alt="Jumpstarts" />
+            </div>
+            <div class="service_card_content">
+              <h3 class="title">Out Of Gas/Fuel Delievery Service</h3>
+              <p class="description">
+                Running out of gas can happen to anyone, Steel Wheel Towing
+                provides an out of gas/fuel delivery service to ensure you’re
+                never stranded for long. Just give us a call.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Service End -->
+  </div>
+  <!-- Service End -->
 
-    <!-- Footer Start -->
-    <div
-      class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn"
-      data-wow-delay="0.1s"
-    >
-      <div class="container py-5">
-        <div class="row g-5">
-          <div class="col-lg-3 col-md-6 footer-logo-image">
-            <img src="./img/black_logo.png" alt="" />
-            <p class="mb-2 py-3">
-              Don’t let car troubles leave you stranded and stressed. Contact
-              Steel Wheel Towing for prompt and professional assistance. Whether
-              you need Trust us to get you back on the road safely and swiftly,
-              whenever you need us.
-            </p>
+  <!-- Footer Start -->
+  <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6 footer-logo-image">
+          <img src="./img/black_logo.png" alt="" />
+          <p class="mb-2 py-3">
+            Don’t let car troubles leave you stranded and stressed. Contact
+            Steel Wheel Towing for prompt and professional assistance. Whether
+            you need Trust us to get you back on the road safely and swiftly,
+            whenever you need us.
+          </p>
 
-            <div class="d-flex pt-2">
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a class="btn btn-outline-light btn-social" href=""
-                ><i class="fab fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Useful Links</h4>
-            <a class="btn btn-link" href="/">Home</a>
-            <a class="btn btn-link" href="./about.html">About</a>
-            <a class="btn btn-link" href="./service.html">Services</a>
-            <a class="btn btn-link" href="./contact.html">Contact</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">Services</h4>
-            <a class="btn btn-link">Breakdown Recovery</a>
-            <a class="btn btn-link">Car Towing</a>
-            <a class="btn btn-link">Fuel delivery</a>
-            <a class="btn btn-link">Jump Start</a>
-            <a class="btn btn-link">Tyre change</a>
-            <a class="btn btn-link">Roadside Assistance</a>
-            <a class="btn btn-link">Battery Replacement</a>
-          </div>
-          <div class="col-lg-3 col-md-6">
-            <h4 class="text-light mb-4">More Info</h4>
-            <p>Phone Number One: +97333773425</p>
-            <p>Phone Number Two: +97336565818</p>
-            <p>Email Address: nitheeshchoottattil@gmail.com</p>
-            <p>Location: Bahrain</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">Useful Links</h4>
+          <a class="btn btn-link" href="/">Home</a>
+          <a class="btn btn-link" href="./about.html">About</a>
+          <a class="btn btn-link" href="./service.html">Services</a>
+          <a class="btn btn-link" href="./contact.html">Contact</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">Services</h4>
+          <a class="btn btn-link">Breakdown Recovery</a>
+          <a class="btn btn-link">Car Towing</a>
+          <a class="btn btn-link">Fuel delivery</a>
+          <a class="btn btn-link">Jump Start</a>
+          <a class="btn btn-link">Tyre change</a>
+          <a class="btn btn-link">Roadside Assistance</a>
+          <a class="btn btn-link">Battery Replacement</a>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-light mb-4">More Info</h4>
+          <p>Phone Number One: +97333773425</p>
+          <p>Phone Number Two: +97336565818</p>
+          <p>Email Address: nitheeshchoottattil@gmail.com</p>
+          <p>Location: Bahrain</p>
+        </div>
       </div>
-      <div class="container">
-        <div class="copyright">
-          <div class="row">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-              &copy;
-              <a class="border-bottom" href="#"
-                >The Steel Wheel Towing Services </a
-              >, All Right Reserved.
-            </div>
-            <div class="col-md-6 text-center text-md-end">
-              <div class="footer-menu">
-                <a href="/">Home</a>
-                <a href="">Cookies</a>
-                <a href="">Help</a>
-                <a href="">FQAs</a>
-              </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy;
+            <a class="border-bottom" href="#">The Steel Wheel Towing Services </a>, All Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="footer-menu">
+              <a href="/">Home</a>
+              <a href="">Cookies</a>
+              <a href="">Help</a>
+              <a href="">FQAs</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- Footer End -->
+  </div>
+  <!-- Footer End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
-      ><i class="bi bi-arrow-up"></i
-    ></a>
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Contact links Start-->
-    <div class="contact-links">
-        <a href="tel:+97336565818" class="phone"
-          ><i class="bi bi-telephone"></i></a>
-        <a href="https://wa.me/+97333773425" class="whatsapp" target="_blank">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-      </div>
+  <!-- Contact links Start-->
+  <div class="contact-links">
+    <a href="tel:+97336565818" class="phone"><i class="bi bi-telephone"></i></a>
+    <a href="https://wa.me/+97333773425" class="whatsapp" target="_blank">
+      <i class="bi bi-whatsapp"></i>
+    </a>
+  </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/tempusdominus/js/moment.min.js"></script>
+  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-  </body>
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>
