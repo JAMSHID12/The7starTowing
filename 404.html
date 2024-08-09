@@ -1,59 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "oZO9oJ_lnvXX0BHcf",
+        });
+      })();
+    </script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Links</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
-        }
+      /* Basic reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
 
-        .contact-links {
-            display: flex;
-            flex-direction: column;
-            position: fixed;
-            bottom: 20px;
-            /* Adjust as needed */
-            right: 20px;
-            /* Adjust as needed */
-        }
+      /* Container for the contact form */
+      .contact-form-container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-        .contact-links a {
-            margin: 5px 0;
-            padding: 10px 20px;
-            text-decoration: none;
-            color: white;
-            background-color: #25D366;
-            /* WhatsApp green */
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+      /* Heading style */
+      .contact-form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
 
-        .contact-links a.phone {
-            background-color: #007bff;
-            /* Phone call blue */
-        }
+      /* Style for form labels */
+      .contact-form-container label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+      }
 
-        .contact-links a:hover {
-            opacity: 0.8;
-        }
+      /* Style for text inputs and textarea */
+      .contact-form-container input[type="text"],
+      .contact-form-container input[type="email"],
+      .contact-form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      /* Button styling */
+      .contact-form-container button {
+        width: 100%;
+        padding: 12px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .contact-form-container button:hover {
+        background-color: #45a049;
+      }
     </style>
-</head>
+  </head>
+  <body>
+    <div class="contact-form-container">
+      <h2>Contact Us</h2>
+      <form action="#" method="post" id="contact-form">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Your full name"
+          required
+        />
 
-<body>
-    <div class="contact-links">
-        <a href="https://wa.me/1234567890" class="whatsapp" target="_blank">WhatsApp</a>
-        <a href="tel:+1234567890" class="phone">Call Us</a>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Your email address"
+          required
+        />
+
+        <label for="message">Message</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write your message here"
+          rows="6"
+          required
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
     </div>
-</body>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+      const serviceId = 'service_v855miy';
+      const templateId = 'template_zkqsx7x';
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
 
+          var params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value
+          }
+
+         
+          emailjs.send(serviceId, templateId, params)
+          .then(
+            (res) => {
+              document.getElementById("name").value = "",
+              document.getElementById("email").value = "",
+              document.getElementById("message").value = ""
+              console.log(res)
+              alert("your message send successfully");
+
+            }).catch((err) => console.log(err));
+
+
+
+          // Email.send({
+          //   SecureToken:
+          //     "60105176EC00361DFB9855303A3150664F6C220055DCE608CF2F0001408C27855EBDA6FD034EAEBA1BB819B732F48450",
+          //   To: "steelwheel82bh@gmail.com", // Replace with the recipient's email address
+          //   From: "jamshidct99@gmail.com", // This should be the same as Username
+          //   Subject: subject,
+          //   Body: `You have received a new message from ${email}: <br><br>${message}`,
+          // }).then(function (response) {
+          //   if (response == "OK") {
+          //     alert("Mail sent successfully!");
+          //   } else {
+          //     alert("Failed to send mail. Response: " + response);
+          //   }
+          // });
+
+
+
+        });
+
+      //   const form = document.querySelector(".contact_form");
+      //   function sendMsg(e) {
+      //     e.preventDefault();
+      //     const name = document.querySelector(".name"),
+      //       email = document.querySelector(".email"),
+      //       msg = document.querySelector("message");
+
+      //     Email.send({
+      //       SecureToken: "aa445044-30e5-4404-a715-20b643478401",
+      //       To: "steelwheel82bh@gmail.com",
+      //       From: email.value,
+      //       Subject: "for testing email api",
+      //       Body: "this is the test mail for email api",
+      //     }).then((message) => alert(message));
+
+      //     //add event listener
+      //   }
+      //   form.addEventListener("submit", sendMsg);
+    </script>
+  </body>
 </html>

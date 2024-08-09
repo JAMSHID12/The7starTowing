@@ -17,6 +17,17 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "oZO9oJ_lnvXX0BHcf",
+        });
+      })();
+    </script>
 
     <!-- Icon Font Stylesheet -->
     <link
@@ -534,29 +545,58 @@
                       type="text"
                       class="form-control border-0"
                       placeholder="Your Name"
+                      id="name"
                       style="height: 55px"
                     />
                   </div>
                   <div class="col-12 col-sm-6">
                     <input
                       type="email"
+                      id="email"
                       class="form-control border-0"
                       placeholder="Your Email"
                       style="height: 55px"
                     />
                   </div>
                   <div class="col-12 col-sm-6">
-                    <select class="form-select border-0" style="height: 55px">
+                    <select
+                      id="service-select"
+                      class="form-select border-0"
+                      style="height: 55px"
+                    >
                       <option selected>Select A Service</option>
-                      <option value="1">Service 1</option>
-                      <option value="2">Service 2</option>
-                      <option value="3">Service 3</option>
+                      <option value="1">Car Towing Services</option>
+                      <option value="2">Breakdown Recovery</option>
+                      <option value="3">Jumpstarts</option>
+                      <option value="3">Fuel Delivery</option>
+                      <option value="3">Mobile Tyres</option>
+                      <option value="3">Battery Service</option>
+                      <option value="3">
+                        Winching & Pull Out service by 4x4
+                      </option>
+                      <option value="3">Breakdown trucks</option>
+                      <option value="3">Roadside Assistance</option>
+                      <option value="3">Minor Auto Repair</option>
+                      <option value="3">Locked Out Service</option>
+                      <option value="3">
+                        Out Of Gas/Fuel Delievery Service
+                      </option>
                     </select>
                   </div>
                   <div class="col-12 col-sm-6">
+                    <input
+                      type="phone"
+                      id="phone"
+                      class="form-control border-0"
+                      placeholder="Your Phone"
+                      style="height: 55px"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6 relative-container">
                     <div class="date" id="date1" data-target-input="nearest">
                       <input
                         type="text"
+                        id="date"
                         class="form-control border-0 datetimepicker-input"
                         placeholder="Service Date"
                         data-target="#date1"
@@ -567,12 +607,16 @@
                   </div>
                   <div class="col-12">
                     <textarea
+                      id="message"
                       class="form-control border-0"
-                      placeholder="Special Request"
+                      placeholder="Special Request,"
                     ></textarea>
                   </div>
                   <div class="col-12">
-                    <button class="btn btn-secondary w-100 py-3" type="submit">
+                    <button
+                      class="btn btn-primary w-100 py-3"
+                      onclick="sendMail()"
+                    >
                       Book Now
                     </button>
                   </div>

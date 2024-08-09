@@ -17,6 +17,17 @@
       href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "oZO9oJ_lnvXX0BHcf",
+        });
+      })();
+    </script>
 
     <!-- Icon Font Stylesheet -->
     <link
@@ -41,6 +52,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    
   </head>
 
   <body>
@@ -61,22 +73,32 @@
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-secondary p-0">
-        <div class="row gx-0 d-none d-lg-flex">
-            <div class="col-lg-9 px-5 text-center">
-                <div class="h-100 d-inline-flex  align-items-center py-3 me-4">
-                  <h5 class="text-primary">24 Hours Support | Service All Over Bahrain | Transportation With
-                    GCC</h5>  
-                </div>
-            </div>
-            <div class="col-lg-3 px-5 text-end">
-                <div class="h-100 d-inline-flex align-items-center">
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
+      <div class="row gx-0 d-none d-lg-flex">
+        <div class="col-lg-9 px-5 text-center">
+          <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+            <h5 class="text-primary">
+              24 Hours Support | Service All Over Bahrain | Transportation With
+              GCC
+            </h5>
+          </div>
         </div>
+        <div class="col-lg-3 px-5 text-end">
+          <div class="h-100 d-inline-flex align-items-center">
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a class="btn btn-sm-square bg-white text-primary me-1" href=""
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a class="btn btn-sm-square bg-white text-primary me-0" href=""
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Topbar End -->
 
@@ -146,20 +168,18 @@
                   <h5 class="text-uppercase">// Booking //</h5>
                   <div class="row">
                     <div class="col-6">
-                        <p class="m-0">
-                            <i class="fa fa-phone-alt text-primary me-2"></i>+97
-                            333773425
-                          </p>
+                      <p class="m-0">
+                        <i class="fa fa-phone-alt text-primary me-2"></i>+97
+                        333773425
+                      </p>
                     </div>
                     <div class="col-6">
-                        <p class="m-0">
-                            <i class="fa fa-phone-alt text-primary me-2"></i>+97
-                            336565818
-                          </p>
+                      <p class="m-0">
+                        <i class="fa fa-phone-alt text-primary me-2"></i>+97
+                        336565818
+                      </p>
                     </div>
                   </div>
-                  
-                 
                 </div>
               </div>
               <div class="col-md-4">
@@ -181,7 +201,7 @@
                   <h5 class="text-uppercase">// Technical //</h5>
                   <p class="m-0">
                     <i class="fa fa-envelope-open text-primary me-2"></i
-                    >nitheeshchoottattil@gmail.com
+                    >steelwheel82bh@gmail.com
                   </p>
                 </div>
               </div>
@@ -198,64 +218,95 @@
               tabindex="0"
             ></iframe>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 bg-secondary p-4">
             <div class="wow fadeInUp" data-wow-delay="0.2s">
-              <p class="mb-4">
-                At Steel Wheel Towing Services, we're committed to
-                providing prompt and reliable service. Whether you need
-                emergency towing, roadside assistance, or automotive repairs,
-                our team of experts is here to help. Please don't hesitate to
-                reach out with any questions or to schedule an appointment.
+              <p class="mb-4 text-light">
+                At Steel Wheel Towing Services, we're committed to providing
+                prompt and reliable service. Whether you need emergency towing,
+                roadside assistance, or automotive repairs, our team of experts
+                is here to help. Please don't hesitate to reach out with any
+                questions or to schedule an appointment.
               </p>
               <form>
                 <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-floating">
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="text"
+                      class="form-control border-0"
+                      placeholder="Your Name"
+                      id="name"
+                      style="height: 55px"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control border-0"
+                      placeholder="Your Email"
+                      style="height: 55px"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <select
+                      id="service-select"
+                      class="form-select border-0"
+                      style="height: 55px"
+                    >
+                      <option selected>Select A Service</option>
+                      <option value="1">Car Towing Services</option>
+                      <option value="2">Breakdown Recovery</option>
+                      <option value="3">Jumpstarts</option>
+                      <option value="3">Fuel Delivery</option>
+                      <option value="3">Mobile Tyres</option>
+                      <option value="3">Battery Service</option>
+                      <option value="3">
+                        Winching & Pull Out service by 4x4
+                      </option>
+                      <option value="3">Breakdown trucks</option>
+                      <option value="3">Roadside Assistance</option>
+                      <option value="3">Minor Auto Repair</option>
+                      <option value="3">Locked Out Service</option>
+                      <option value="3">
+                        Out Of Gas/Fuel Delievery Service
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-sm-6">
+                    <input
+                      type="phone"
+                      id="phone"
+                      class="form-control border-0"
+                      placeholder="Your Phone"
+                      style="height: 55px"
+                    />
+                  </div>
+                  <div class="col-12 col-sm-6 relative-container">
+                    <div class="date" id="date1" data-target-input="nearest">
                       <input
                         type="text"
-                        class="form-control"
-                        id="name"
-                        placeholder="Your Name"
+                        id="date"
+                        class="form-control border-0 datetimepicker-input"
+                        placeholder="Service Date"
+                        data-target="#date1"
+                        data-toggle="datetimepicker"
+                        style="height: 55px"
                       />
-                      <label for="name">Your Name</label>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-floating">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        placeholder="Your Email"
-                      />
-                      <label for="email">Your Email</label>
                     </div>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="subject"
-                        placeholder="Subject"
-                      />
-                      <label for="subject">Subject</label>
-                    </div>
+                    <textarea
+                      id="message"
+                      class="form-control border-0"
+                      placeholder="Special Request,"
+                    ></textarea>
                   </div>
                   <div class="col-12">
-                    <div class="form-floating">
-                      <textarea
-                        class="form-control"
-                        placeholder="Leave a message here"
-                        id="message"
-                        style="height: 100px"
-                      ></textarea>
-                      <label for="message">Message</label>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <button class="btn btn-primary w-100 py-3" type="submit">
-                      Send Message
+                    <button
+                      class="btn btn-primary w-100 py-3"
+                      onclick="sendMail()"
+                    >
+                      Book Now
                     </button>
                   </div>
                 </div>
@@ -349,12 +400,13 @@
 
     <!-- Contact links Start-->
     <div class="contact-links">
-        <a href="tel:+97336565818" class="phone"
-          ><i class="bi bi-telephone"></i></a>
-        <a href="https://wa.me/+97333773425" class="whatsapp" target="_blank">
-          <i class="bi bi-whatsapp"></i>
-        </a>
-      </div>
+      <a href="tel:+97336565818" class="phone"
+        ><i class="bi bi-telephone"></i
+      ></a>
+      <a href="https://wa.me/+97333773425" class="whatsapp" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
@@ -373,7 +425,12 @@
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script>
+      document.getElementById("date").addEventListener("change", function () {
+        var selectedDate = this.value;
+        console.log("Selected Date:", selectedDate); // Log or use the selected date
+      });
+    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
